@@ -28,15 +28,17 @@ public class Conta {
 	
 	@Column(name = "tipo_conta", nullable = false, length = 45)
 	private String tipoConta;
+	
+	private Cliente cliente;
 
 	public int getIdConta() {
 		return idConta;
 	}
 
-	public void setIdConta(int idConta) {
+	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
 	}
-
+	
 	public int getNumeroConta() {
 		return numeroConta;
 	}
@@ -69,15 +71,24 @@ public class Conta {
 		this.tipoConta = tipoConta;
 	}
 
-	public Conta(int idConta, int numeroConta, int agencia, Double saldo, String tipoConta) {
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Conta(Integer idConta, int numeroConta, int agencia, Double saldo, String tipoConta, Cliente cliente) {
 		super();
 		this.idConta = idConta;
 		this.numeroConta = numeroConta;
 		this.agencia = agencia;
 		this.saldo = saldo;
 		this.tipoConta = tipoConta;
+		this.cliente = cliente;
 	}
-	
+
 	public Conta() {
 		
 	}
