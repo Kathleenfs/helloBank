@@ -14,7 +14,8 @@ public class Conta {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "idconta")
-	private int idConta;
+	private Integer idConta;
+	
 	
 	@Column(name = "numero_conta", nullable = false, length = 9, unique = true)
 	private int numeroConta;
