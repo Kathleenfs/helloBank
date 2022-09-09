@@ -2,13 +2,19 @@ package com.projeto.helloBank.models;
 
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name = "clientes")
@@ -36,6 +42,20 @@ public class Cliente {
 	
 	@Column(name = "endereco", nullable = false, length = 45)
 	private String endereco;
+
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("cliente")
+	private List<Conta> listaContas;
+
+	
+	
+	public List<Conta> getListaContas() {
+		return listaContas;
+	}
+
+	public void setListaContas(List<Conta> listaContas) {
+		this.listaContas = listaContas;
+	}
 
 	public int getIdCliente() {
 		return idCliente;
@@ -93,8 +113,10 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-	public Cliente(int idCliente, String nome, String cpf, Date dataNascimento, String telefone, String email,
-			String endereco) {
+	
+	
+	public Cliente(Integer idCliente, String nome, String cpf, Date dataNascimento, String telefone, String email,
+			String endereco, List<Conta> listaContas) {
 		super();
 		this.idCliente = idCliente;
 		this.nome = nome;
@@ -103,8 +125,9 @@ public class Cliente {
 		this.telefone = telefone;
 		this.email = email;
 		this.endereco = endereco;
+		this.listaContas = listaContas;
 	}
-	
+
 	public Cliente() {
 		
 	}

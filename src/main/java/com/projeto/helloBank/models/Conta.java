@@ -5,7 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "contas")
@@ -29,6 +33,10 @@ public class Conta {
 	@Column(name = "tipo_conta", nullable = false, length = 45)
 	private String tipoConta;
 	
+	
+	@ManyToOne
+	@JoinColumn(name="cliente_idcliente")
+	@JsonIgnoreProperties("listaContas")
 	private Cliente cliente;
 
 	public int getIdConta() {
