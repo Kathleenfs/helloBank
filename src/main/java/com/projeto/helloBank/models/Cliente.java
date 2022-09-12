@@ -1,6 +1,6 @@
 package com.projeto.helloBank.models;
 
-
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -15,31 +15,30 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 @Entity
 @Table(name = "clientes")
 public class Cliente {
-	
+
+	@Column(name = "idcliente")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idcliente")
 	private Integer idCliente;
-	
+
 	@Column(name = "nome", nullable = false, length = 45)
 	private String nome;
-	
-	@Column(name = "cpf", nullable = false, length = 15, unique= true)
+
+	@Column(name = "cpf", nullable = false, length = 15, unique = true)
 	private String cpf;
-	
+
 	@Column(name = "data_nascimento", nullable = false)
-	private Date dataNascimento;
-	
+	private LocalDate dataNascimento;
+
 	@Column(name = "telefone", nullable = false, length = 15)
 	private String telefone;
-	
+
 	@Column(name = "email", nullable = false, length = 45, unique = true)
 	private String email;
-	
+
 	@Column(name = "endereco", nullable = false, length = 45)
 	private String endereco;
 
@@ -47,8 +46,6 @@ public class Cliente {
 	@JsonIgnoreProperties("cliente")
 	private List<Conta> listaContas;
 
-	
-	
 	public List<Conta> getListaContas() {
 		return listaContas;
 	}
@@ -57,7 +54,7 @@ public class Cliente {
 		this.listaContas = listaContas;
 	}
 
-	public int getIdCliente() {
+	public Integer getIdCliente() {
 		return idCliente;
 	}
 
@@ -81,11 +78,11 @@ public class Cliente {
 		this.cpf = cpf;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
@@ -113,9 +110,7 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-	
-	
-	public Cliente(Integer idCliente, String nome, String cpf, Date dataNascimento, String telefone, String email,
+	public Cliente(Integer idCliente, String nome, String cpf, LocalDate dataNascimento, String telefone, String email,
 			String endereco, List<Conta> listaContas) {
 		super();
 		this.idCliente = idCliente;
@@ -129,7 +124,7 @@ public class Cliente {
 	}
 
 	public Cliente() {
-		
+
 	}
 
 }

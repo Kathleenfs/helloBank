@@ -1,5 +1,9 @@
 package com.projeto.helloBank.daos;
 
-public class ClienteDAO {
+import org.springframework.data.repository.CrudRepository;
 
+import com.projeto.helloBank.models.Cliente;
+
+public interface ClienteDAO extends CrudRepository<Cliente, Integer> {
+		
 }
