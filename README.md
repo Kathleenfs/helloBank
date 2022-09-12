@@ -8,19 +8,26 @@
 
 
 <h1>Objetivo</h1>
-<p>Criar uma API utilizando a linguagem Java para Cadastrar clientes, produto e entregar o histórico dos pedidos</p>
+<p>Criar uma API utilizando a linguagem Java para Cadastrar clientes, contas e exibir histórico de transações.s</p>
 <h2>ENTREGAS MÍNIMAS</h2>
 
-<h3>Back-end:</h3>
+<h3>Metodologias Ágeis:</h3>
 <ul>
-<li>Cadastro de clientes</li>
+<li>Kanban com todas as tarefas organizadas e responsáveis definidos.
+</li>
+<h3>Back-end:</h3>
 <li>Listagem de clientes</li>
 <li>Atualização de clientes</li>
 <li>Deletar clientes</li>
 <li>Histórico de transações entre contas</li>
-<li>Controle de estoque</li>
-<li>Medicamentos genéricos contêm 20% de desconto.</li>
+<li>Cadastro de clientes</li>
 </ul>
+<h3>Banco de Dados:</h3>
+<ul>
+<li>Tabelas bem estruturadas e populadas com valores para testes.</li>
+<li>O Banco deve ser entregue em script SQL junto ao repositório.
+</li>
+ </ul>
 <h3>Gerais:</h3>
 <ul>
 <li>O código deve ser entregue em um repositório no Github.</li>
