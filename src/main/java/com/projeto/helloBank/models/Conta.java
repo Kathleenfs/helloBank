@@ -15,17 +15,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name = "contas")
 public class Conta {
 	
+	@Column(name = "idconta")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "idconta")
-	private Integer idConta;
-	
+	private int idConta;
 	
 	@Column(name = "numero_conta", nullable = false, length = 9, unique = true)
-	private int numeroConta;
+	private Integer numeroConta;
 	
 	@Column(name = "agencia", nullable = false, length = 4)
-	private int agencia;
+	private Integer agencia;
 	
 	@Column(name = "saldo", nullable = true)
 	private Double saldo;
@@ -51,7 +50,7 @@ public class Conta {
 		return numeroConta;
 	}
 
-	public void setNumeroConta(int numeroConta) {
+	public void setNumeroConta(Integer numeroConta) {
 		this.numeroConta = numeroConta;
 	}
 
@@ -59,7 +58,7 @@ public class Conta {
 		return agencia;
 	}
 
-	public void setAgencia(int agencia) {
+	public void setAgencia(Integer agencia) {
 		this.agencia = agencia;
 	}
 
@@ -87,16 +86,7 @@ public class Conta {
 		this.cliente = cliente;
 	}
 
-	public Conta(Integer idConta, int numeroConta, int agencia, Double saldo, String tipoConta, Cliente cliente) {
-		super();
-		this.idConta = idConta;
-		this.numeroConta = numeroConta;
-		this.agencia = agencia;
-		this.saldo = saldo;
-		this.tipoConta = tipoConta;
-		this.cliente = cliente;
-	}
-
+	
 	public Conta() {
 		
 	}

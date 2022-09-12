@@ -16,18 +16,13 @@ public class ContaServiceImpl implements IContaService {
 
 	@Override
 	public Conta criarNovo(Conta novo) {
-		if (novo.getTipoConta() != null) {
-			return dao.save(novo);
-		}
-		return null;
+		return dao.save(novo);
+
 	}
 
 	@Override
 	public Conta atualizarDados(Conta dados) {
-		if (dados.getTipoConta() != null) {
-			return dao.save(dados);
-		}
-		return null;
+		return dao.save(dados);
 	}
 
 	@Override

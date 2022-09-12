@@ -45,7 +45,7 @@ public class ContaController {
 		return ResponseEntity.notFound().build();
 	}
 
-	@PutMapping("/contas")
+	@PutMapping("/conta")
 	public ResponseEntity<Conta> alterar(@RequestBody Conta dados) {
 		Conta res = service.atualizarDados(dados);
 		if (res != null) {
@@ -53,6 +53,7 @@ public class ContaController {
 		}
 		return ResponseEntity.badRequest().build();
 	}
+	
 
 	@DeleteMapping("/conta/{idConta}")
 	public ResponseEntity<Conta> excluirConta(@PathVariable Integer idConta) {
