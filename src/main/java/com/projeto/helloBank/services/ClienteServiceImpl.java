@@ -16,7 +16,7 @@ public class ClienteServiceImpl implements IClienteService {
 
 	@Override
 	public Cliente criarNovo(Cliente novo) {
-		if (novo.getNome() != null) {
+		if (novo.getNome()!= null) {
 			return dao.save(novo);
 		}
 		return null;
@@ -24,7 +24,7 @@ public class ClienteServiceImpl implements IClienteService {
 
 	@Override
 	public Cliente atualizarDados(Cliente dados) {
-		if (dados.getCpf() !=null && dados.getNome() != null) {
+		if (dados.getCpf()!= null && dados.getNome()!= null) {
 			return dao.save(dados);
 		}
 		return null;
