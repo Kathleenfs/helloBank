@@ -8,7 +8,8 @@
 
 
 <h1>Objetivo</h1>
-<p>Criar uma API utilizando a linguagem Java para Cadastrar clientes, contas e exibir histórico de transações.s</p>
+<p>Criar uma API utilizando a linguagem Java para Cadastrar clientes, contas e exibir histórico de transações.
+O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e dados para contato. O cliente deve ser atrelado a uma conta bancária e registrar histórico de transações entre as contas.</p>
 <h2>ENTREGAS MÍNIMAS</h2>
 
 <h3>Metodologias Ágeis:</h3>
