@@ -53,12 +53,12 @@ public class ContaController {
 		}
 		return ResponseEntity.badRequest().build();
 	}
-	
 
 	@DeleteMapping("/conta/{idConta}")
 	public ResponseEntity<Conta> excluirConta(@PathVariable Integer idConta) {
 		service.excluirConta(idConta);
 		return ResponseEntity.ok(null);
 	}
-
 }
+
+
