@@ -42,27 +42,27 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 
 <h2>Descrição ENDPOINTS</h2>
 <div>
-<p>O programa é divide entre os endpoints das 3 entidades, cliente, pedido, produto
+<p>O programa é divide entre os endpoints das 3 entidades, cliente, conta e ...
 <p>Cliente, os campos para criação de um novo cliente são:</p>
-<p>nome, cpf, email, tel</p>
+<p>nome, cpf, email, telefonde</p>
 <ul>
 <li>POST: http://localhost:8080/client</li>
 <li>GET: http://localhost:8080/client</li>
 <li>DELETE: http://localhost:8080/client/{id do cliente}</li>
 <li>PUT: http://localhost:8080/client/{id do clinte}</li>
 </ul>
-<p>Pedido, o campo para criação de um novo pedido é:</p>
+<p>conta</p>
 <p>id_cliente</p>
  <ul>
- <li>POST: http://localhost:8080/pedido</li>
- <li>GET: http://localhost:8080/pedido</li>
+ <li>POST: http://localhost:8080/</li>
+ <li>GET: http://localhost:8080/</li>
  </ul>
  
-<p>Produto, os campos para criação de um novo pedido são:</p>
-<p>id_pedido, nome, desc_produto, preco_produto, generico_produto</p>
+<p>, os campos para criação de um novo  são:</p>
+<p>id_, nome, desc_produto, preco_produto, generico_produto</p>
 <ul>
-<li>POST: http://localhost:8080/produto</li>
-<li>GET: http://localhost:8080/produto</li>
+<li>POST: http://localhost:8080/p</li>
+<li>GET: http://localhost:8080/p</li>
 </ul>
 </div>
 <h3>Tecnologias utilizadas</h3>
