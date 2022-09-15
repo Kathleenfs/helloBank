@@ -3,11 +3,13 @@ package com.projeto.helloBank.services;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.projeto.helloBank.daos.TransacaoDAO;
 import com.projeto.helloBank.models.Conta;
 import com.projeto.helloBank.models.Transacao;
 
+@Service
 public class TransacaoServiceImpl implements ITransacaoService {
 
 	@Autowired

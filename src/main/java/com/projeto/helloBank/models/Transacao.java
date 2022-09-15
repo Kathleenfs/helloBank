@@ -20,7 +20,7 @@ public class Transacao {
 	@Column(name = "idtransacao")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer idTransacao;
 	
 	@Column(name = "data", nullable = false)
 	private Date data;
@@ -33,12 +33,20 @@ public class Transacao {
 	@JsonIgnoreProperties("listaTransacoes")
 	private Conta conta;
 
-	public Integer getId() {
-		return id;
+	public Integer getIdTransacao() {
+		return idTransacao;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdTransacao(Integer idTransacao) {
+		this.idTransacao = idTransacao;
+	}
+
+	public Conta getConta() {
+		return conta;
+	}
+
+	public void setConta(Conta conta) {
+		this.conta = conta;
 	}
 
 	public Date getData() {

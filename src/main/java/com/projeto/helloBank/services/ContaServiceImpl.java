@@ -41,4 +41,15 @@ public class ContaServiceImpl implements IContaService {
 
 	}
 
+	@Override
+	public void sacar(Double valor, Integer id) {
+		dao.setFixedSaldo(valor, id);
+	}
+
+	@Override
+	public void depositar(Double valor, Integer id) {
+		dao.setFixedSaldoFor(valor, id);
+		
+	}
+
 }

@@ -26,8 +26,9 @@ public class ContaController {
 		Conta res = service.criarNovo(novo);
 		if (res != null) {
 			return ResponseEntity.ok(res);
+
 		}
-		return ResponseEntity.badRequest().build();
+		return ResponseEntity.notFound().build();
 	}
 
 	@GetMapping("/contas")
@@ -59,6 +60,17 @@ public class ContaController {
 		service.excluirConta(idConta);
 		return ResponseEntity.ok(null);
 	}
+
+	@PutMapping("depositar/{valor}/{id}")
+	public ResponseEntity<?> depositar(@PathVariable Double valor, @PathVariable Integer idConta) {
+		service.depositar(valor, idConta);
+		return ResponseEntity.ok(null);
+	}
+
+	@PutMapping("sacar/{valor}/{id}")
+	public ResponseEntity<?> sacar(@PathVariable Double valor, @PathVariable Integer idConta) {
+		service.sacar(valor, idConta);
+		return ResponseEntity.ok(null);
+
+	}
 }
-
-

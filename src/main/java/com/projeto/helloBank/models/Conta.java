@@ -17,33 +17,32 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "contas")
 public class Conta {
-	
+
 	@Column(name = "idconta")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idConta;
-	
+
 	@Column(name = "numero_conta", nullable = false, length = 9, unique = true)
-	private Integer numeroConta;
-	
+	private int numeroConta;
+
 	@Column(name = "agencia", nullable = false, length = 4)
-	private Integer agencia;
-	
+	private int agencia;
+
 	@Column(name = "saldo", nullable = true)
 	private Double saldo;
-	
+
 	@Column(name = "tipo_conta", nullable = false, length = 45)
 	private String tipoConta;
-	
-	
+
 	@ManyToOne
-	@JoinColumn(name="cliente_idcliente")
+	@JoinColumn(name = "cliente_idcliente")
 	@JsonIgnoreProperties("listaContas")
 	private Cliente cliente;
 
-	@OneToMany(mappedBy="conta")
+	@OneToMany(mappedBy = "conta")
 	private List<Transacao> listaTransacoes;
-	
+
 	public int getIdConta() {
 		return idConta;
 	}
@@ -51,21 +50,13 @@ public class Conta {
 	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
 	}
-	
+
 	public int getNumeroConta() {
 		return numeroConta;
 	}
 
-	public void setNumeroConta(Integer numeroConta) {
-		this.numeroConta = numeroConta;
-	}
-
 	public int getAgencia() {
 		return agencia;
-	}
-
-	public void setAgencia(Integer agencia) {
-		this.agencia = agencia;
 	}
 
 	public Double getSaldo() {
@@ -92,8 +83,18 @@ public class Conta {
 		this.cliente = cliente;
 	}
 
-	
-	
+	public void setIdConta(int idConta) {
+		this.idConta = idConta;
+	}
+
+	public void setNumeroConta(int numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
 	public List<Transacao> getListaTransacoes() {
 		return listaTransacoes;
 	}
@@ -103,7 +104,7 @@ public class Conta {
 	}
 
 	public Conta() {
-		
+
 	}
-	
+
 }

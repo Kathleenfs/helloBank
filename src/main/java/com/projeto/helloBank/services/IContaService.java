@@ -11,4 +11,6 @@ public interface IContaService {
 	public ArrayList<Conta> buscarTodos();
 	public Conta buscarPeloId(Integer id);
 	public void excluirConta(Integer id);
+	public void sacar(Double valor, Integer id);
+	public void depositar(Double valor, Integer id);
 }
