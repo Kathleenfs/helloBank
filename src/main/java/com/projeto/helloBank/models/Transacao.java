@@ -7,7 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="transacoes")
@@ -23,6 +27,11 @@ public class Transacao {
 	
 	@Column(name="valor", nullable = false)
 	private Double valor;
+	
+	@ManyToOne
+	@JoinColumn(name="conta_idconta")
+	@JsonIgnoreProperties("listaTransacoes")
+	private Conta conta;
 
 	public Integer getId() {
 		return id;

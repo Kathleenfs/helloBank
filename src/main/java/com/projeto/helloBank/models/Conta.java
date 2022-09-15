@@ -1,5 +1,7 @@
 package com.projeto.helloBank.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -38,6 +41,9 @@ public class Conta {
 	@JsonIgnoreProperties("listaContas")
 	private Cliente cliente;
 
+	@OneToMany(mappedBy="conta")
+	private List<Transacao> listaTransacoes;
+	
 	public int getIdConta() {
 		return idConta;
 	}
@@ -87,6 +93,15 @@ public class Conta {
 	}
 
 	
+	
+	public List<Transacao> getListaTransacoes() {
+		return listaTransacoes;
+	}
+
+	public void setListaTransacoes(List<Transacao> listaTransacoes) {
+		this.listaTransacoes = listaTransacoes;
+	}
+
 	public Conta() {
 		
 	}
