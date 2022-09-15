@@ -45,12 +45,38 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 <p>O programa é divide entre os endpoints das 3 entidades, cliente, conta e ...
 <p>Cliente, os campos para criação de um novo cliente são:</p>
 <p>nome, cpf, email, telefonde</p>
-<ul>
-<li>POST: http://localhost:8080/client</li>
-<li>GET: http://localhost:8080/client</li>
-<li>DELETE: http://localhost:8080/client/{id do cliente}</li>
-<li>PUT: http://localhost:8080/client/{id do clinte}</li>
-</ul>
+
+#### Retornar todos os clientes
+
+```http
+  GET /client
+```
+#### Cadastrar cliente
+
+```http
+  POST /clients
+```
+
+#### Atualizar cliente
+  
+```http
+  PUT /clients/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Obrigatório passar no rota o id do cliente que precisa atualizar**. |
+  
+#### Deletar cliente
+
+```http
+  DELETE /clients/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `int` | **Obrigatório passar na rota o id do cliente que precisa deletar**.  |
+
 <p>conta</p>
 <p>id_cliente</p>
  <ul>
