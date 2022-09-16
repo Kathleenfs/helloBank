@@ -63,13 +63,13 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 #### Cadastrar cliente
 
 ```http
-  POST /clients
+  POST /clientes
 ```
 
 #### Atualizar cliente
   
 ```http
-  PUT /clients/${id}
+  PUT /clientes/${idCliente}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -118,7 +118,7 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 #### Depositar
 
 ```http
-  PUT depositar/{valor}/{id}
+  PUT depositar/{valor}/{idConta}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
@@ -128,7 +128,7 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 #### Sacar
 
 ```http
-  PUT sacar/{valor}/{id}
+  PUT sacar/{valor}/{idConta}
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
