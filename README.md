@@ -40,17 +40,26 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
  
 <p>Documentação da Aplicação</p>
 
-<h2>Descrição ENDPOINTS</h2>
+<h3>Descrição ENDPOINTS</h3>
+
 <div>
-<p>O programa é divide entre os endpoints das 3 entidades, cliente, conta e ...
-<p>Cliente, os campos para criação de um novo cliente são:</p>
-<p>nome, cpf, email, telefonde</p>
+  
+## Cliente
 
 #### Retornar todos os clientes
 
 ```http
-  GET /client
+  GET /cliente
 ```
+#### Retornar cliente pelo id
+
+```http
+  GET /cliente/{idCliente}
+```
+  | Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `idCliente`      | `int` | **Obrigatório passar no rota o id do cliente que deseja buscar**. |
+  
 #### Cadastrar cliente
 
 ```http
@@ -70,26 +79,72 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 #### Deletar cliente
 
 ```http
-  DELETE /clients/${id}
+  DELETE /cliente/${idCliente}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `int` | **Obrigatório passar na rota o id do cliente que precisa deletar**.  |
+| `idCliente`      | `int` | **Obrigatório passar na rota o id do cliente que precisa deletar**.  |
 
-<p>conta</p>
-<p>id_cliente</p>
- <ul>
- <li>POST: http://localhost:8080/</li>
- <li>GET: http://localhost:8080/</li>
- </ul>
- 
-<p>, os campos para criação de um novo  são:</p>
-<p>id_, nome, desc_produto, preco_produto, generico_produto</p>
-<ul>
-<li>POST: http://localhost:8080/p</li>
-<li>GET: http://localhost:8080/p</li>
-</ul>
+## Conta
+
+#### Retornar todas as contas
+
+```http
+  GET /contas
+```
+  
+#### Retornar conta pelo id
+
+```http
+  GET /contas/{idConta}
+```
+  | Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `idConta`      | `int` | **Obrigatório passar no rota o id da conta que deseja buscar**. |
+  
+#### Cadastrar conta
+
+```http
+  POST /contas
+```
+
+#### Atualizar conta
+  
+```http
+  PUT /conta
+```
+
+#### Depositar
+
+```http
+  PUT depositar/{valor}/{id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `valor`      | `Double` | **Obrigatório passar na rota o valor referente ao depósito**.  |
+| `id`      | `int` | **Obrigatório passar na rota o id da conta onde deseja realizar o depósito**.  |
+  
+#### Sacar
+
+```http
+  PUT sacar/{valor}/{id}
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `valor`      | `Double` | **Obrigatório passar na rota o valor que deseja sacar**.  |
+| `id`      | `int` | **Obrigatório passar na rota o id da conta de onde será realizado o saque**.  |
+  
+#### Deletar conta
+
+```http
+  DELETE /conta/{idConta}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `idConta`      | `int` | **Obrigatório passar na rota o id da conta que precisa deletar**.  |
+
 </div>
 <h3>Tecnologias utilizadas</h3>
 <div style="display: inline_block"><br>
