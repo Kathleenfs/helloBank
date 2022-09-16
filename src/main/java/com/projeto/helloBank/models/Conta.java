@@ -41,6 +41,7 @@ public class Conta {
 	private Cliente cliente;
 
 	@OneToMany(mappedBy = "conta")
+	@JsonIgnoreProperties("conta")
 	private List<Transacao> listaTransacoes;
 
 	public int getIdConta() {

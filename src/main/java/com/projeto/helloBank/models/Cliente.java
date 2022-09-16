@@ -41,6 +41,8 @@ public class Cliente {
 	@Column(name = "endereco", nullable = false, length = 45)
 	private String endereco;
 
+	
+
 	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("cliente")
 	private List<Conta> listaContas;

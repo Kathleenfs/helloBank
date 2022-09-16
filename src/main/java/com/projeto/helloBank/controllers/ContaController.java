@@ -61,13 +61,13 @@ public class ContaController {
 		return ResponseEntity.ok(null);
 	}
 
-	@PutMapping("depositar/{valor}/{id}")
+	@PutMapping("depositar/{valor}/{idConta}")
 	public ResponseEntity<?> depositar(@PathVariable Double valor, @PathVariable Integer idConta) {
 		service.depositar(valor, idConta);
 		return ResponseEntity.ok(null);
 	}
 
-	@PutMapping("sacar/{valor}/{id}")
+	@PutMapping("sacar/{valor}/{idConta}")
 	public ResponseEntity<?> sacar(@PathVariable Double valor, @PathVariable Integer idConta) {
 		service.sacar(valor, idConta);
 		return ResponseEntity.ok(null);

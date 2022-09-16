@@ -28,6 +28,7 @@ public class Transacao {
 	@Column(name="valor", nullable = false)
 	private Double valor;
 	
+	
 	@ManyToOne
 	@JoinColumn(name="conta_idconta")
 	@JsonIgnoreProperties("listaTransacoes")
