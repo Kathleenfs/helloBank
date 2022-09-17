@@ -1,5 +1,6 @@
 package com.projeto.helloBank.models;
 
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -9,7 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -22,6 +26,7 @@ public class Transacao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idTransacao;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "data", nullable = false)
 	private Date data;
 	
@@ -64,6 +69,11 @@ public class Transacao {
 
 	public void setValor(Double valor) {
 		this.valor = valor;
+	}
+	
+	@PrePersist
+	private void OnCreat() {
+		data = new Date();
 	}
 	
 
