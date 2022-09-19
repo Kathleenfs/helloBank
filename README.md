@@ -168,7 +168,7 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 
  
  
-<h3>Tecnologias utilizadas</h3>
+<h2>TECNOLOGIAS UTILIZADAS</h2>
 
 
  
