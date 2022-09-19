@@ -146,9 +146,16 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 | `idConta`      | `int` | **Obrigatório passar na rota o id da conta que precisa deletar**.  |
 
 </div>
+
+ [Swagger](http://localhost:8080/swagger-ui/index.html)
+ 
 <h3>Tecnologias utilizadas</h3>
+
+
+ 
 <div style="display: inline_block"><br>
   <img align="center" alt="kath-Java" height="50" width="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg">
   <img align="center" alt="kath-Java" height="50" width="70"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" />
   <img align="center" alt="kath-Java" height="50" width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+   <img align="center" alt="kath-CSS" height="90" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" />
  </div>
