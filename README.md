@@ -145,6 +145,41 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 | :---------- | :--------- | :------------------------------------------ |
 | `idConta`      | `int` | **Obrigatório passar na rota o id da conta que precisa deletar**.  |
 
+## Transação
+
+#### Retornar todas as transações
+
+```http
+  GET /transacao
+```
+  
+#### Retornar transação pelo id
+
+```http
+  GET /transacao/{idTransacao}
+```
+  
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `idTransacao`      | `int` | **Obrigatório passar no rota o id da transação que deseja buscar**. |
+  
+#### Cadastrar transação
+
+```http
+  POST /transacao
+```
+  
+#### Deletar transação
+
+```http
+  DELETE /transacao/{idTransacao}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `idTransacao`      | `int` | **Obrigatório passar na rota o id da transação que precisa deletar**.  |
+
+
 </div>
 
  [Swagger](http://localhost:8080/swagger-ui/index.html)
