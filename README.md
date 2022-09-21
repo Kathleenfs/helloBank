@@ -24,6 +24,17 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 
 [Documentação API - Swagger](http://localhost:8080/swagger-ui/index.html)
 
+<h2>Acesse a API na AWS</h2>
+
+[API  AWS - HELLO BANK ](http:3.217.30.142:8081/clientes)
+
+<h2> Acesse Jenkins</h2>
+
+[API - Jenkins ](http:3.217.30.142:8080) 
+<ul>
+<li>Login:hellobank</li>
+<li>senha:grupo4</li>
+</ul>
 <h3>Descrição DOS ENDPOINTS</h3>
 
 <div>
@@ -40,7 +51,7 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 ```http
   GET /cliente/{idCliente}
 ```
-  | Parâmetro   | Tipo       | Descrição                                   |
+| Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `idCliente`      | `int` | **Obrigatório passar no rota o id do cliente que deseja buscar**. |
   
