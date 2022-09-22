@@ -31,10 +31,7 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 <h2> Acesse Jenkins</h2>
 
 [API - Jenkins ](http:3.217.30.142:8080) 
-<ul>
-<li>Login:hellobank</li>
-<li>senha:grupo4</li>
-</ul>
+
 <h3>Descrição DOS ENDPOINTS</h3>
 
 <div>
