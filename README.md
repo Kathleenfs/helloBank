@@ -18,7 +18,7 @@ O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e d
 👩🏽‍💻 Lucas Lopes Schroeder <br>
 👩🏽‍💻 Kathleen Ferreira dos Santos Silva <br>
 👩🏽‍💻 Thiago Serafim Fonseca <br>
-👩🏽‍💻 Ian Pablo Borges da Silva <br>
+
 
 <h2>Acesse a documentação da API clicando no link abaixo</h2>
 
