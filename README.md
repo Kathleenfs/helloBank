@@ -11,14 +11,6 @@
 <p>Criar uma API utilizando a linguagem Java para Cadastrar clientes, contas e exibir histórico de transações.
 O sistema deve permitir cadastro de novos clientes, incluindo dados pessoais e dados para contato. O cliente deve ser atrelado a uma conta bancária e registrar histórico de transações entre as contas.</p>
 
-<h2>DESENVOLVEDORES</h2>
-
-👨🏽‍💻 Forrest Gump Silva de Oliveira <br>
-👩🏻‍💻 Jessica Moraes <br>
-👩🏽‍💻 Lucas Lopes Schroeder <br>
-👩🏽‍💻 Kathleen Ferreira dos Santos Silva <br>
-👩🏽‍💻 Thiago Serafim Fonseca <br>
-
 
 <h2>Acesse a documentação da API clicando no link abaixo</h2>
 
